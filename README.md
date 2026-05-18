@@ -81,21 +81,21 @@ When you enable the HCP Terraform or Terraform Enterprise OIDC integration (`ter
 ## Requirements
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="requirement_terraform"></a> [terraform](#requirement\_terraform) | >= 1.6.1, < 2.0.0 |
 | <a name="requirement_aws"></a> [aws](#requirement\_aws) | >= 6.0.0, < 7.0.0 |
 
 ## Providers
 
 | Name | Version |
-|------|---------|
+| ---- | ------- |
 | <a name="provider_aws"></a> [aws](#provider\_aws) | >= 6.0.0, < 7.0.0 |
 | <a name="provider_local"></a> [local](#provider\_local) | n/a |
 
 ## Modules
 
 | Name | Source | Version |
-|------|--------|---------|
+| ---- | ------ | ------- |
 | <a name="module_aft_account_provisioning_framework"></a> [aft\_account\_provisioning\_framework](#module\_aft\_account\_provisioning\_framework) | ./modules/aft-account-provisioning-framework | n/a |
 | <a name="module_aft_account_request_framework"></a> [aft\_account\_request\_framework](#module\_aft\_account\_request\_framework) | ./modules/aft-account-request-framework | n/a |
 | <a name="module_aft_backend"></a> [aft\_backend](#module\_aft\_backend) | ./modules/aft-backend | n/a |
@@ -110,7 +110,7 @@ When you enable the HCP Terraform or Terraform Enterprise OIDC integration (`ter
 ## Resources
 
 | Name | Type |
-|------|------|
+| ---- | ---- |
 | [aws_partition.current](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/partition) | data source |
 | [aws_service.home_region_validation](https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/service) | data source |
 | [local_file.python_version](https://registry.terraform.io/providers/hashicorp/local/latest/docs/data-sources/file) | data source |
@@ -119,7 +119,7 @@ When you enable the HCP Terraform or Terraform Enterprise OIDC integration (`ter
 ## Inputs
 
 | Name | Description | Type | Default | Required |
-|------|-------------|------|---------|:--------:|
+| ---- | ----------- | ---- | ------- | :------: |
 | <a name="input_account_customizations_repo_branch"></a> [account\_customizations\_repo\_branch](#input\_account\_customizations\_repo\_branch) | Branch to source account customizations repo from | `string` | `"main"` | no |
 | <a name="input_account_customizations_repo_name"></a> [account\_customizations\_repo\_name](#input\_account\_customizations\_repo\_name) | Repository name for the account customizations files. For non-CodeCommit repos, name should be in the format of Org/Repo | `string` | `"aft-account-customizations"` | no |
 | <a name="input_account_provisioning_customizations_repo_branch"></a> [account\_provisioning\_customizations\_repo\_branch](#input\_account\_provisioning\_customizations\_repo\_branch) | Branch to source account provisioning customization files | `string` | `"main"` | no |
@@ -172,13 +172,14 @@ When you enable the HCP Terraform or Terraform Enterprise OIDC integration (`ter
 | <a name="input_terraform_project_name"></a> [terraform\_project\_name](#input\_terraform\_project\_name) | Project name for Terraform Cloud or Enterprise - project must exist before deployment | `string` | `"Default Project"` | no |
 | <a name="input_terraform_token"></a> [terraform\_token](#input\_terraform\_token) | Terraform token for Cloud or Enterprise | `string` | `"null"` | no |
 | <a name="input_terraform_version"></a> [terraform\_version](#input\_terraform\_version) | Terraform version being used for AFT | `string` | `"1.6.1"` | no |
+| <a name="input_terraform_workspace_name_prefix"></a> [terraform\_workspace\_name\_prefix](#input\_terraform\_workspace\_name\_prefix) | Workspace name prefix for Terraform Cloud or Enterprise - workspace must exist before deployment | `string` | `null` | no |
 | <a name="input_tf_backend_secondary_region"></a> [tf\_backend\_secondary\_region](#input\_tf\_backend\_secondary\_region) | AFT creates a backend for state tracking for its own state as well as OSS cases. The backend's primary region is the same as the AFT region, but this defines the secondary region to replicate to. | `string` | `""` | no |
 | <a name="input_vcs_provider"></a> [vcs\_provider](#input\_vcs\_provider) | Customer VCS Provider - valid inputs are codecommit, bitbucket, github, githubenterprise, gitlab, or gitLab self-managed | `string` | `"codecommit"` | no |
 
 ## Outputs
 
 | Name | Description |
-|------|-------------|
+| ---- | ----------- |
 | <a name="output_account_customizations_repo_branch"></a> [account\_customizations\_repo\_branch](#output\_account\_customizations\_repo\_branch) | n/a |
 | <a name="output_account_customizations_repo_name"></a> [account\_customizations\_repo\_name](#output\_account\_customizations\_repo\_name) | n/a |
 | <a name="output_account_provisioning_customizations_repo_branch"></a> [account\_provisioning\_customizations\_repo\_branch](#output\_account\_provisioning\_customizations\_repo\_branch) | n/a |

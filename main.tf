@@ -284,6 +284,7 @@ module "aft_ssm_parameters" {
   terraform_project_name                                      = var.terraform_project_name
   terraform_oidc_integration                                  = var.terraform_oidc_integration
   terraform_oidc_aws_audience                                 = var.terraform_oidc_aws_audience
+  terraform_workspace_name_prefix                             = var.terraform_workspace_name_prefix
   aft_feature_cloudtrail_data_events                          = var.aft_feature_cloudtrail_data_events
   aft_feature_enterprise_support                              = var.aft_feature_enterprise_support
   aft_feature_delete_default_vpcs_enabled                     = var.aft_feature_delete_default_vpcs_enabled

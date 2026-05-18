@@ -381,6 +381,12 @@ variable "terraform_project_name" {
   }
 }
 
+variable "terraform_workspace_name_prefix" {
+  type        = string
+  description = "Workspace name prefix for Terraform Cloud or Enterprise - workspace must exist before deployment"
+  default     = null
+}
+
 variable "terraform_api_endpoint" {
   description = "API Endpoint for Terraform. Must be in the format of https://xxx.xxx."
   type        = string
